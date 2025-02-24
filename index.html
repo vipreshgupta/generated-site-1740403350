@@ -1,0 +1,1004 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Join our online coding bootcamp and become a skilled developer. We offer courses in Full Stack Development, Data Science, Cybersecurity, and AI/ML.">
+    <meta name="keywords" content="coding bootcamp, full stack development, data science, cybersecurity, AI, ML, online learning, programming">
+    <title>Online Coding Bootcamp</title>
+    <style>
+        /* CSS Styles */
+        :root {
+            --primary-color: #007bff;
+            --accent-color: #ff7f50;
+            --neutral-light: #f8f9fa;
+            --neutral-dark: #343a40;
+            --text-color: #212529;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--text-color);
+            background-color: white;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+            padding: 0;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+        }
+
+        nav ul li a:hover {
+            background-color: rgba(255,255,255,0.2);
+        }
+
+        .logo {
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+        }
+
+        section {
+            padding: 2rem 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        #hero {
+            background-color: var(--neutral-light);
+            text-align: center;
+            padding: 4rem 1rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        #hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        #hero button {
+            background-color: var(--accent-color);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #hero button:hover {
+            background-color: #e07047;
+        }
+
+        #hero img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        #statistics {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 1rem;
+            padding: 2rem 1rem;
+            background-color: white;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 1rem;
+            border-radius: 5px;
+            background-color: var(--neutral-light);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            flex: 1 1 200px;
+            min-width: 150px;
+        }
+
+        .stat-item i {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-item h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-item p {
+            font-size: 1rem;
+        }
+
+        #courses {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+            padding: 2rem 1rem;
+        }
+
+        .course-card {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 1rem;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .course-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .course-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .course-card p {
+            margin-bottom: 1rem;
+        }
+
+        .course-card a {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .course-card a:hover {
+            background-color: #0056b3;
+        }
+
+        .course-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+        }
+
+        #roadmap {
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+
+        #roadmap h2 {
+            color: var(--primary-color);
+            margin-bottom: 2rem;
+        }
+
+        .roadmap-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .roadmap-step {
+            position: relative;
+            padding: 1rem;
+            border: 2px solid var(--primary-color);
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .roadmap-step:hover {
+            background-color: var(--primary-color);
+            color: white;
+            transform: scale(1.1);
+        }
+
+        .roadmap-step::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 100%;
+            width: 60px;
+            height: 2px;
+            background-color: var(--primary-color);
+            transform: translateY(-50%);
+        }
+
+        .roadmap-step:last-child::after {
+            display: none;
+        }
+
+        .roadmap-step span {
+            font-weight: bold;
+        }
+
+        .tooltip {
+            position: absolute;
+            top: calc(100% + 10px);
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: var(--neutral-dark);
+            color: white;
+            padding: 0.5rem;
+            border-radius: 5px;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+            z-index: 1;
+        }
+
+        .roadmap-step:hover .tooltip {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        #testimonials {
+            padding: 2rem 1rem;
+            background-color: var(--neutral-light);
+        }
+
+        #testimonials h2 {
+            text-align: center;
+            color: var(--primary-color);
+            margin-bottom: 2rem;
+        }
+
+        .testimonials-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .testimonial {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 1rem;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            flex: 1 1 300px;
+            min-width: 250px;
+        }
+
+        .testimonial p {
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-author {
+            font-style: italic;
+            color: var(--primary-color);
+        }
+
+        .testimonial video {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        #registration {
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+
+        #registration h2 {
+            color: var(--primary-color);
+            margin-bottom: 2rem;
+        }
+
+        .registration-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group select {
+            padding: 0.5rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        }
+
+        .form-group .error-message {
+            color: red;
+            font-size: 0.8rem;
+            margin-top: 0.2rem;
+        }
+
+        #registration button {
+            background-color: var(--accent-color);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #registration button:hover {
+            background-color: #e07047;
+        }
+
+        .progress-indicator {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .progress-step {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: #ddd;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        .progress-step.active {
+            background-color: var(--primary-color);
+        }
+
+        #faq {
+            padding: 2rem 1rem;
+            background-color: var(--neutral-light);
+        }
+
+        #faq h2 {
+            text-align: center;
+            color: var(--primary-color);
+            margin-bottom: 2rem;
+        }
+
+        .faq-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .faq-item {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 1rem;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .faq-item h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            cursor: pointer;
+        }
+
+        .faq-item p {
+            margin-bottom: 0;
+            display: none;
+        }
+
+        .faq-item.active p {
+            display: block;
+        }
+
+        #chatbot {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+        #chatbot-button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            transition: background-color 0.3s ease;
+        }
+
+        #chatbot-button:hover {
+            background-color: #0056b3;
+        }
+
+        #chatbot-button i {
+            font-size: 1.5rem;
+        }
+
+        #chatbot-window {
+            position: absolute;
+            bottom: 70px;
+            right: 0;
+            width: 300px;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            display: none;
+        }
+
+        #chatbot-header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.5rem;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #chatbot-close {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+
+        #chatbot-body {
+            padding: 1rem;
+            height: 200px;
+            overflow-y: auto;
+        }
+
+        #chatbot-input {
+            display: flex;
+            padding: 0.5rem;
+        }
+
+        #chatbot-input input {
+            flex: 1;
+            padding: 0.5rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-right: 0.5rem;
+        }
+
+        #chatbot-input button {
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        #chatbot-input button:hover {
+            background-color: #e07047;
+        }
+
+        #blog {
+            padding: 2rem 1rem;
+        }
+
+        #blog h2 {
+            text-align: center;
+            color: var(--primary-color);
+            margin-bottom: 2rem;
+        }
+
+        .blog-posts {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+        }
+
+        .blog-post {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 1rem;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .blog-post h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .blog-post p {
+            margin-bottom: 1rem;
+        }
+
+        .blog-post a {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .blog-post a:hover {
+            background-color: #0056b3;
+        }
+
+        #coding-challenge {
+            padding: 2rem 1rem;
+            text-align: center;
+            background-color: var(--neutral-light);
+        }
+
+        #coding-challenge h2 {
+            color: var(--primary-color);
+            margin-bottom: 2rem;
+        }
+
+        #coding-challenge iframe {
+            width: 100%;
+            height: 500px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        footer {
+            background-color: var(--neutral-dark);
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+
+        footer ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        footer ul li a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer ul li a:hover {
+            color: var(--accent-color);
+        }
+
+        footer p {
+            margin-bottom: 0;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                background-color: var(--primary-color);
+                box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
+
+            nav ul.show {
+                display: flex;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            #statistics {
+                flex-direction: column;
+            }
+
+            .roadmap-container {
+                flex-direction: column;
+            }
+
+            .roadmap-step::after {
+                display: none;
+            }
+
+            .roadmap-step {
+                margin-bottom: 1rem;
+            }
+        }
+        /* Accessibility enhancements */
+        a, button, [role="button"], input, select, textarea {
+            cursor: pointer;
+            outline: none;
+        }
+
+        a:focus, button:focus, [role="button"]:focus, input:focus, select:focus, textarea:focus {
+            box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+        }
+
+        [aria-hidden="true"] {
+            display: none;
+        }
+
+        [aria-live="polite"] {
+            position: absolute;
+            clip: rect(1px, 1px, 1px, 1px);
+            padding: 0;
+            border: 0;
+            height: 1px;
+            width: 1px;
+            overflow: hidden;
+        }
+    </style>
+    <!-- Include Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Code Bootcamp</div>
+            <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+            <ul id="menu">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#courses">Courses</a></li>
+                <li><a href="#roadmap">Roadmap</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#registration">Register</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#blog">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97" alt="Coding Bootcamp" width="800" height="533">
+        <h1>Empower Your Coding Journey</h1>
+        <p>Join our bootcamp to become a skilled developer.</p>
+        <button onclick="location.href='#registration'">Enroll Now</button>
+    </section>
+
+    <section id="statistics">
+        <div class="stat-item">
+            <i class="fas fa-graduation-cap"></i>
+            <h3>1000+</h3>
+            <p>Graduates</p>
+        </div>
+        <div class="stat-item">
+            <i class="fas fa-briefcase"></i>
+            <h3>95%</h3>
+            <p>Job Placement Rate</p>
+        </div>
+        <div class="stat-item">
+            <i class="fas fa-handshake"></i>
+            <h3>50+</h3>
+            <p>Industry Partnerships</p>
+        </div>
+    </section>
+
+    <section id="courses">
+        <div class="course-card">
+            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c" alt="Full Stack Development" width="400" height="267">
+            <h3>Full Stack Development</h3>
+            <p>Learn front-end and back-end development to build dynamic web applications.</p>
+            <a href="#full-stack">Learn More</a>
+        </div>
+        <div class="course-card">
+            <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713" alt="Data Science" width="400" height="267">
+            <h3>Data Science</h3>
+            <p>Master data analysis, machine learning, and data visualization techniques.</p>
+            <a href="#data-science">Learn More</a>
+        </div>
+        <div class="course-card">
+            <img src="https://images.unsplash.com/photo-1550439062-609e1531270e" alt="Cybersecurity" width="400" height="267">
+            <h3>Cybersecurity</h3>
+            <p>Protect systems and networks from cyber threats and attacks.</p>
+            <a href="#cybersecurity">Learn More</a>
+        </div>
+        <div class="course-card">
+            <img src="https://images.unsplash.com/photo-1516110833967-0b5716ca1387" alt="AI/ML" width="400" height="267">
+            <h3>AI/ML</h3>
+            <p>Explore artificial intelligence and machine learning algorithms.</p>
+            <a href="#ai-ml">Learn More</a>
+        </div>
+    </section>
+
+    <section id="roadmap">
+        <h2>Our Learning Roadmap</h2>
+        <div class="roadmap-container">
+            <div class="roadmap-step">
+                <span>1</span>
+                <div class="tooltip">Beginner</div>
+            </div>
+            <div class="roadmap-step">
+                <span>2</span>
+                <div class="tooltip">Intermediate</div>
+            </div>
+            <div class="roadmap-step">
+                <span>3</span>
+                <div class="tooltip">Advanced</div>
+            </div>
+            <div class="roadmap-step">
+                <span>4</span>
+                <div class="tooltip">Expert</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials">
+        <h2>Student Testimonials</h2>
+        <div class="testimonials-container">
+            <div class="testimonial">
+                <p>"This bootcamp changed my life! I went from zero coding experience to landing a job as a software engineer."</p>
+                <p class="testimonial-author">- Jane Doe, Software Engineer at TechCorp</p>
+                <video controls width="320" height="240">
+                    <source src="https://www.example.com/testimonial1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="testimonial">
+                <p>"The instructors were amazing and the curriculum was comprehensive. I highly recommend this bootcamp!"</p>
+                <p class="testimonial-author">- John Smith, Data Scientist at Data Insights</p>
+                <video controls width="320" height="240">
+                    <source src="https://www.example.com/testimonial2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <section id="registration">
+        <h2>Register Now</h2>
+        <div class="progress-indicator">
+            <div class="progress-step active">1</div>
+            <div class="progress-step">2</div>
+            <div class="progress-step">3</div>
+        </div>
+        <form class="registration-form" id="registrationForm">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required aria-required="true">
+                <div class="error-message" id="nameError"></div>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required aria-required="true">
+                <div class="error-message" id="emailError"></div>
+            </div>
+            <div class="form-group">
+                <label for="course">Select Course</label>
+                <select id="course" name="course" required aria-required="true">
+                    <option value="">Select a course</option>
+                    <option value="full-stack">Full Stack Development</option>
+                    <option value="data-science">Data Science</option>
+                    <option value="cybersecurity">Cybersecurity</option>
+                    <option value="ai-ml">AI/ML</option>
+                </select>
+                <div class="error-message" id="courseError"></div>
+            </div>
+            <button type="button" onclick="validateForm()">Next</button>
+        </form>
+    </section>
+
+    <section id="faq">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-list">
+            <div class="faq-item">
+                <h3 onclick="toggleFAQ(this)">What is the duration of the bootcamp?</h3>
+                <p>The bootcamp typically lasts for 12-16 weeks, depending on the course.</p>
+            </div>
+            <div class="faq-item">
+                <h3 onclick="toggleFAQ(this)">Do I need prior coding experience?</h3>
+                <p>No prior coding experience is required for our beginner-level courses.</p>
+            </div>
+            <div class="faq-item">
+                <h3 onclick="toggleFAQ(this)">What is the job placement rate?</h3>
+                <p>Our job placement rate is 95% within six months of graduation.</p>
+            </div>
+        </div>
+    </section>
+
+    <div id="chatbot">
+        <button id="chatbot-button" onclick="toggleChatbot()"><i class="fas fa-comment"></i></button>
+        <div id="chatbot-window">
+            <div id="chatbot-header">
+                <span>Chat with us</span>
+                <button id="chatbot-close" onclick="toggleChatbot()">&times;</button>
+            </div>
+            <div id="chatbot-body">
+                <!-- Chat messages will be displayed here -->
+            </div>
+            <div id="chatbot-input">
+                <input type="text" id="chatbot-message" placeholder="Type your message...">
+                <button onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <section id="blog">
+        <h2>Latest Blog Posts</h2>
+        <div class="blog-posts">
+            <div class="blog-post">
+                <h3>Top 10 JavaScript Libraries for 2024</h3>
+                <p>Discover the most popular JavaScript libraries that every developer should know.</p>
+                <a href="https://www.example.com/blog/top-10-js-libraries">Read More</a>
+            </div>
+            <div class="blog-post">
+                <h3>How to Ace Your Coding Interview</h3>
+                <p>Get tips and tricks to prepare for your next coding interview and land your dream job.</p>
+                <a href="https://www.example.com/blog/ace-coding-interview">Read More</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="coding-challenge">
+        <h2>Test Your Skills</h2>
+        <iframe src="https://codesandbox.io/embed/new" title="Coding Challenge"></iframe>
+    </section>
+
+    <footer>
+        <ul>
+            <li><a href="https://www.facebook.com">Facebook</a></li>
+            <li><a href="https://www.twitter.com">Twitter</a></li>
+            <li><a href="https://www.linkedin.com">LinkedIn</a></li>
+        </ul>
+        <p>&copy; 2024 Code Bootcamp. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // JavaScript Code
+
+        // Toggle mobile menu
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('show');
+        }
+
+        // Toggle FAQ item
+        function toggleFAQ(element) {
+            const faqItem = element.parentElement;
+            faqItem.classList.toggle('active');
+        }
+
+        // Toggle chatbot window
+        function toggleChatbot() {
+            const chatbotWindow = document.getElementById('chatbot-window');
+            chatbotWindow.style.display = chatbotWindow.style.display === 'none' ? 'block' : 'none';
+        }
+
+        // Send message in chatbot
+        function sendMessage() {
+            const messageInput = document.getElementById('chatbot-message');
+            const message = messageInput.value.trim();
+            if (message !== '') {
+                const chatbotBody = document.getElementById('chatbot-body');
+                const newMessage = document.createElement('div');
+                newMessage.textContent = message;
+                chatbotBody.appendChild(newMessage);
+                messageInput.value = '';
+                chatbotBody.scrollTop = chatbotBody.scrollHeight;
+            }
+        }
+
+        // Form validation
+        function validateForm() {
+            const nameInput = document.getElementById('name');
+            const emailInput = document.getElementById('email');
+            const courseSelect = document.getElementById('course');
+            const nameError = document.getElementById('nameError');
+            const emailError = document.getElementById('emailError');
+            const courseError = document.getElementById('courseError');
+
+            let isValid = true;
+
+            if (nameInput.value.trim() === '') {
+                nameError.textContent = 'Name is required';
+                isValid = false;
+            } else {
+                nameError.textContent = '';
+            }
+
+            if (emailInput.value.trim() === '') {
+                emailError.textContent = 'Email is required';
+                isValid = false;
+            } else if (!isValidEmail(emailInput.value.trim())) {
+                emailError.textContent = 'Invalid email format';
+                isValid = false;
+            } else {
+                emailError.textContent = '';
+            }
+
+            if (courseSelect.value === '') {
+                courseError.textContent = 'Please select a course';
+                isValid = false;
+            } else {
+                courseError.textContent = '';
+            }
+
+            if (isValid) {
+                alert('Registration successful!');
+                // Here you can add code to submit the form data to a server
+            }
+        }
+
+        function isValidEmail(email) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+    </script>
+</body>
+</html>
